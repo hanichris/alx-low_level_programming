@@ -6,7 +6,9 @@ void print_array(int *a, int n)
 
 	while (iter < n)
 	{
-		printf("%i, ",a[iter]);
+		printf("%i",a[iter]);
+		if (iter > 0)
+			printf(", ");
 		iter++;
 	}
 	printf("\n");
