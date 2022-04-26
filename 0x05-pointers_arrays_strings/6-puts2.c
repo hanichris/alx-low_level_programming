@@ -13,4 +13,5 @@ void puts2(char *str)
 		_putchar(str[iter]);
 		iter = iter + 2;
 	}
+	_putchar('\n');
 }
