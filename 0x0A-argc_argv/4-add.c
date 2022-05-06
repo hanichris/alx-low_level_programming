@@ -26,6 +26,11 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
+			if ('\0' != *end)
+			{
+				printf("Error\n");
+				return (1);
+			}
 			si = (int)sl;
 			sum += si;
 		}
