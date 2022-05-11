@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int compute_min_coin_num(int cents)
+/**
+ * compute_min_coin_num - compute the minimum number of coins to be used
+ * for change.
+ * @cents : int
+ * Return: 0 or 1.
+ */
+int __attribute__((unused))compute_min_coin_num(int cents)
 {
 	if (cents <= 0)
 		return (0);
@@ -26,21 +31,32 @@ int compute_min_coin_num(int cents)
 int main(int argc, char *argv[])
 {
 	int cents;
+	int coin = 0;
 	int min_coin_num = 0;
-	
+	int viable_coins[] = {25, 10, 5, 2, 1};
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	cents = atoi(argv[1]);
 
 	if (cents < 0)
 		printf("%d\n", 0);
 	else
 	{
-		min_coin_num = compute_min_coin_num(cents);
+		while (cents > 0 && coin < 5)
+		{
+			if (cents >= viable_coins[coin])
+			{
+				cents -= viable_coins[coin];
+				min_coin_num++;
+			}
+			else
+				coin++;
+		}
 		printf("%d\n", min_coin_num);
 	}
 
