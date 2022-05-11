@@ -11,7 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *mem;
-	int iter = 0;
+	unsigned int iter = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -23,6 +23,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		mem[iter] = 0;
 		iter++;
 	}
-	return ((void *)mem);
+	return (mem);
 
 }
