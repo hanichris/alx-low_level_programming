@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Checks the code.
+ * @argc: argument count.
+ * @argv: argument vector.
+ * Return: 0 or (98, 99, 100)
+ */
 int main(int argc, char *argv[])
 {
 	int num1;
