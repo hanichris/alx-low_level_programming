@@ -14,13 +14,8 @@ void print_all(const char * const format, ...)
 	int iter = 0;
 	char *str;
 
-	if (!format)
-	{
-		printf("\n");
-		return;
-	}
 	va_start(argv, format);
-	while (format[iter])
+	while (format && format[iter])
 	{
 		switch (format[iter++])
 		{
