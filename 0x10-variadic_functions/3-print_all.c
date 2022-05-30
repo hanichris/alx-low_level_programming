@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /**
  * print_all - print out all the arguments passed taking
@@ -13,6 +14,11 @@ void print_all(const char * const format, ...)
 	int iter = 0;
 	char *str;
 
+	if (!format)
+	{
+		printf("\n");
+		return;
+	}
 	va_start(argv, format);
 	while (format[iter])
 	{
