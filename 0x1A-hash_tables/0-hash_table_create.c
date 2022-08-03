@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * hash_table_t - create an empty hash table with Chaining
+ * hash_table_create - create an empty hash table with Chaining
  * collision handling.
  * @size: size of the hash table array.
  * Return: Pointer to the created hash table.
